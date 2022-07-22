@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import index from ".";
 
-export default function ContentRight() {
+export default function ContentRight({ setStep, step }) {
   const [radioList, setRadioList] = useState([
     "Registrazione del contratto d’affitto, della proroga o dell’annualità",
     "Registrazione della risoluzione",
@@ -22,6 +21,10 @@ export default function ContentRight() {
     const tempRadioListActive = [false, false, false, false, false];
     tempRadioListActive[index] = true;
     setRadioListActive(tempRadioListActive);
+  };
+
+  const nextStep = () => {
+    setStep(2);
   };
 
   return (
@@ -47,7 +50,7 @@ export default function ContentRight() {
             </div>
           );
         })}
-        <button>Avanti</button>
+        <button onClick={nextStep}>Avanti</button>
       </div>
     </div>
   );

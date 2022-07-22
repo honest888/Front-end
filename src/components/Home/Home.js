@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ContentLeft from "./ContentLeft";
 import ContentRight from "./ContentRight";
 import ContentRight1 from "./ContentRight1";
@@ -6,7 +6,9 @@ import ContentRight2 from "./ContentRight2";
 import Sidebar from "./Sidebar";
 import "../../assets/css/home.css";
 
-export default function index() {
+export default function Home() {
+  const [step, setStep] = useState(1);
+
   return (
     <>
       <div className="row home">
@@ -23,7 +25,13 @@ export default function index() {
               <ContentLeft />
             </div>
             <div className="col-md-12 col-xl-8">
-              <ContentRight />
+              {step == 1 ? (
+                <ContentRight setStep={setStep} step={step} />
+              ) : step == 2 ? (
+                <ContentRight1 setStep={setStep} step={step} />
+              ) : (
+                <ContentRight2 />
+              )}
             </div>
           </div>
         </div>

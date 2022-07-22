@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import index from ".";
 
-export default function ContentRight1() {
+export default function ContentRight1({ setStep, step }) {
   const [radioList1, setRadioList1] = useState(["Fabbricati", "Terreni"]);
   const [radioList2, setRadioList2] = useState([
     "Caparra confirmatoria",
@@ -27,6 +26,14 @@ export default function ContentRight1() {
     const tempRadioListActive2 = [false, false, false];
     tempRadioListActive2[index] = true;
     setRadioListActive2(tempRadioListActive2);
+  };
+
+  const nextStep = () => {
+    setStep(3);
+  };
+
+  const prevStep = () => {
+    setStep(1);
   };
 
   return (
@@ -82,14 +89,13 @@ export default function ContentRight1() {
         <div>
           <label className="label">Acconto versato</label>
         </div>
-        <input type="text"></input>
-        <input type="checkbox">
-          <label className="label">Ivato</label>
-        </input>
+        <input type="text" />
+        <input type="checkbox" />
+        <label className="label">Ivato</label>
       </div>
       <div>
-        <button>Indietro</button>
-        <button>Avanti</button>
+        <button onClick={prevStep}>Indietro</button>
+        <button onClick={nextStep}>Avanti</button>
       </div>
     </div>
   );
