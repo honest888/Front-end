@@ -89,7 +89,7 @@ export default function ContentRight1({ setStep, step }) {
         <div>
           <label className="label">Acconto versato</label>
         </div>
-        <input type="text" className="text-box text-right" />
+        <input type="number" className="text-box text-right" />
         <div className="check-box-group">
           <input type="checkbox" className="check-box" />
           <label className="label">Ivato</label>

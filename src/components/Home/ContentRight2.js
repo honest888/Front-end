@@ -14,13 +14,13 @@ export default function ContentRight2({ setStep, step }) {
       <div className="group">
         <div className="label-textbox-group left">
           <div className="label">Codice</div>
-          <input type="text" className="text-left text-box"></input>
-          <input type="text" className="text-left text-box"></input>
+          <input type="number" className="text-left text-box"></input>
+          <input type="number" className="text-left text-box"></input>
         </div>
         <div className="label-textbox-group">
           <div className="label">Importo</div>
-          <input type="text" className="text-right text-box"></input>
-          <input type="text" className="text-right text-box"></input>
+          <input type="number" className="text-right text-box"></input>
+          <input type="number" className="text-right text-box"></input>
         </div>
       </div>
       <div>
