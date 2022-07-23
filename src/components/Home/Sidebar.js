@@ -82,7 +82,7 @@ export default function Sidebar() {
             <div key={"menu" + index} className="sidebar-menu">
               <div>
                 <button onClick={(e) => onHandleCollapse(index)}>
-                  <p
+                  <div
                     className={
                       selectedMenu == index && subMenuList[index].length == 0
                         ? "active-menu"
@@ -91,7 +91,7 @@ export default function Sidebar() {
                     style={{ textAlign: "left" }}
                   >
                     {menu}{" "}
-                  </p>
+                  </div>
                   {subMenuList[index].length > 0 ? (
                     subMenuOpened[index] ? (
                       <ChevronUp />
@@ -105,7 +105,7 @@ export default function Sidebar() {
                 <Collapse isOpened={subMenuOpened[index]}>
                   {subMenuList[index].map((subMenu, index) => {
                     return (
-                      <p
+                      <div
                         className={
                           selectedSubMenu == index ? "active-menu" : ""
                         }
@@ -113,7 +113,7 @@ export default function Sidebar() {
                         key={"submenu" + index}
                       >
                         {subMenu}
-                      </p>
+                      </div>
                     );
                   })}
                 </Collapse>
@@ -123,9 +123,9 @@ export default function Sidebar() {
         })}
       </div>
       <div className="sidebar-footer-menu">
-        <p>Supporto</p>
-        <p>Impostazioni</p>
-        <p>Logout</p>
+        <div>Supporto</div>
+        <div>Impostazioni</div>
+        <div>Logout</div>
       </div>
       <div className="sidebar-icon">
         <ChevronDoubleLeft />

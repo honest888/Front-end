@@ -1,9 +1,11 @@
 .ReactCollapse--collapse {
     transition: height 200ms;
 }
-.ReactCollapse--content p {
+.ReactCollapse--content div {
     padding-left:40px;
+    padding-top: 14px;
     text-align: left;
+    cursor: pointer;
 }
 .sidebar {
     background-image: url('/public/images/sidebar.png');
@@ -11,7 +13,7 @@
     height: 100vh;
     color: #ffffff;
     padding-top:80px;
-
+    font-family: "Mulish-light";
     font-style: normal;
     font-weight: 20;
     font-size: 15px;
@@ -67,6 +69,10 @@
     font-weight: bold;
 }
 
+.sidebar-menu > div {
+    padding: 7px 0px;
+}
+
 .sidebar-menu button {
     width: 100%;
     display: flex;
@@ -84,10 +90,17 @@
     font-size: 20px;
     line-height: 25px;
 }
+
 .sidebar-footer-menu {
     padding-top: 30px;
     padding-left: 10%;
 }
+
+.sidebar-footer-menu div {
+    padding:7px 0px;
+    cursor: pointer;
+}
+
 .sidebar-icon {
     display: block;
     position:relative;
@@ -132,11 +145,11 @@ ul {
     font-weight: bold;
     margin: 15px 5px;
     color: rgba(35, 39, 56, 0.5);
+    cursor: pointer;
 }
 
 .content-left .active-menu {
     color: #7c0e2b;
-    cursor: pointer;
 }
 
 .content-right {
