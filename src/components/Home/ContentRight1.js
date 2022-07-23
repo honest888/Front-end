@@ -40,7 +40,7 @@ export default function ContentRight1({ setStep, step }) {
     <div className="content-right">
       <div className="right-title">Caparra confirmatoria o acconto?</div>
       <div>
-        <div className="right-sub-title">Oggetto della vendita</div>
+        <div className="radio-group">Oggetto della vendita</div>
         <div>
           {radioList1.map((radio, index) => {
             return (
@@ -52,7 +52,7 @@ export default function ContentRight1({ setStep, step }) {
                 />
                 <label
                   className={`${
-                    radioListActive1[index] ? "active-lablel" : "lable"
+                    radioListActive1[index] ? "active-label" : "label"
                   }`}
                   onClick={(e) => handleClick1(index)}
                 >
@@ -62,7 +62,7 @@ export default function ContentRight1({ setStep, step }) {
             );
           })}
         </div>
-        <div className="right-sub-title">Tipo di importo versato</div>
+        <div className="radio-group">Tipo di importo versato</div>
         <div>
           {radioList2.map((radio, index) => {
             return (
@@ -74,7 +74,7 @@ export default function ContentRight1({ setStep, step }) {
                 />
                 <label
                   className={`${
-                    radioListActive2[index] ? "active-lablel" : "lable"
+                    radioListActive2[index] ? "active-label" : "label"
                   }`}
                   onClick={(e) => handleClick2(index)}
                 >
@@ -89,9 +89,11 @@ export default function ContentRight1({ setStep, step }) {
         <div>
           <label className="label">Acconto versato</label>
         </div>
-        <input type="text" />
-        <input type="checkbox" />
-        <label className="label">Ivato</label>
+        <input type="text" className="text-box text-right" />
+        <div className="check-box-group">
+          <input type="checkbox" className="check-box" />
+          <label className="label">Ivato</label>
+        </div>
       </div>
       <div>
         <button onClick={prevStep}>Indietro</button>

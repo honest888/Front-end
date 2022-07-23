@@ -1,23 +1,35 @@
-import React from "react";
-import { Kanban } from "react-bootstrap-icons";
+import React, { useState } from "react";
 
-export default function ContentRight2() {
+export default function ContentRight2({ setStep, step }) {
+  const prevStep = () => {
+    setStep(2);
+  };
+  const firstStep = () => {
+    setStep(1);
+  };
+
   return (
     <div className="content-right">
       <div className="right-title">Imposta di registro</div>
-      <div className="row">
-        <label className="label col-sm-4">Codice</label>
-        <label className="label col-sm-8">Importo</label>
+      <div className="group">
+        <div className="label-textbox-group left">
+          <div className="label">Codice</div>
+          <input type="text" className="text-left text-box"></input>
+          <input type="text" className="text-left text-box"></input>
+        </div>
+        <div className="label-textbox-group">
+          <div className="label">Importo</div>
+          <input type="text" className="text-right text-box"></input>
+          <input type="text" className="text-right text-box"></input>
+        </div>
       </div>
-      <div className="row">
-        <input type="text" className="col-sm-4"></input>
-        <input type="text" className="col-sm-8"></input>
+      <div>
+        <button onClick={prevStep}>Indietro</button>
+        <button className="go-to-first" onClick={firstStep}>
+          Torna all’inizio
+        </button>
       </div>
-      <div className="row">
-        <input type="text" className="col-sm-4"></input>
-        <input type="text" className="col-sm-8"></input>
-      </div>
-      <div className="row">
+      <div>
         <label className="label active-link">
           Calcola eventuali sanzioni e interessi
         </label>

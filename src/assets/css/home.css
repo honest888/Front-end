@@ -141,23 +141,31 @@ ul {
 
 .content-right {
     background-color: #ffffff;
-    padding: 20px 30px;
+    padding: 40px 30px;
 }
 
 .content-right .right-title {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 .content-right button {
     margin: 50px 0px 10px 0px;
-    border: none;
-    border-radius: 3px;
-    padding: 10px 45px;
-    color: #ffffff;
-    background-color: #7c0e2b;
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 200px;
+    height: 56px;
+    color: black;
+    background-color: white;
     margin-right: 10px;
+}
+
+.content-right button:hover {
+    background-color: #7c0e2b;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .content-right .input-radio {
@@ -171,13 +179,59 @@ ul {
 
 .content-right .active-label {
     color: #7c0e2b;
+    font-family: "Mulish-Bold";
 }
 
 .content-right .label {
     color: #606F88;
     font-size: 14px;
 }
+
+.content-right .radio-group {
+    margin-top: 20px;
+}
+
+.content-right .text-right {
+    text-align: right;
+}
+
+.content-right .text-box {
+    box-sizing: border-box;
+    border: 1px solid #BDBDBD;
+    padding: 8px 5px;
+    border-radius: 5px;
+}
+
+.group {
+    min-width:600px;
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.group input {
+    margin-top:8px;
+    margin-bottom: 10px;
+}
+
+.label-textbox-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.left input {
+    max-width: 140px;
+}
+
 .content-right .active-link {
     color: #7c0e2b;
     text-decoration: underline;
+    margin-top: 40px;
 }
+ 
+.content-right .go-to-first:hover {
+    background-color: #606F88;
+}
+

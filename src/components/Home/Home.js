@@ -25,12 +25,12 @@ export default function Home() {
               <ContentLeft />
             </div>
             <div className="col-md-12 col-xl-8">
-              {step == 1 ? (
+              {step === 1 ? (
                 <ContentRight setStep={setStep} step={step} />
-              ) : step == 2 ? (
+              ) : step === 2 ? (
                 <ContentRight1 setStep={setStep} step={step} />
               ) : (
-                <ContentRight2 />
+                <ContentRight2 setStep={setStep} step={step} />
               )}
             </div>
           </div>
