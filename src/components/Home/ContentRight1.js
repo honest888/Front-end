@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CurrencyInput from "react-currency-input-field";
 
 export default function ContentRight1({ setStep, step }) {
   const [radioList1, setRadioList1] = useState(["Fabbricati", "Terreni"]);
@@ -35,6 +36,8 @@ export default function ContentRight1({ setStep, step }) {
   const prevStep = () => {
     setStep(1);
   };
+
+  // Jquery Dependency
 
   return (
     <div className="content-right">
@@ -89,7 +92,17 @@ export default function ContentRight1({ setStep, step }) {
         <div>
           <label className="label">Acconto versato</label>
         </div>
-        <input type="number" className="text-box text-right" />
+        <CurrencyInput
+          id="input-example"
+          name="input-name"
+          placeholder="€00,00"
+          decimalsLimit={2}
+          groupSeparator="."
+          decimalSeparator=","
+          prefix="€"
+          className="text-box text-right"
+        />
+        ;
         <div className="check-box-group">
           <input type="checkbox" className="check-box" />
           <label className="label">Ivato</label>

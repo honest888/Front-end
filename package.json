@@ -11,6 +11,7 @@
     "react-bootstrap": "^2.4.0",
     "react-bootstrap-icons": "^1.8.4",
     "react-collapse": "^5.1.1",
+    "react-currency-input-field": "^3.6.4",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",

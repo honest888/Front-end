@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CurrencyInput from "react-currency-input-field";
 
 export default function ContentRight2({ setStep, step }) {
   const prevStep = () => {
@@ -14,13 +15,43 @@ export default function ContentRight2({ setStep, step }) {
       <div className="group">
         <div className="label-textbox-group left">
           <div className="label">Codice</div>
-          <input type="number" className="text-left text-box"></input>
-          <input type="number" className="text-left text-box"></input>
+          <CurrencyInput
+            id="input-example"
+            name="input-name"
+            placeholder="00T"
+            suffix="T"
+            className="text-box text-left"
+          />
+          <CurrencyInput
+            id="input-example"
+            name="input-name"
+            placeholder="00T"
+            suffix="T"
+            className="text-box text-left"
+          />
         </div>
         <div className="label-textbox-group">
           <div className="label">Importo</div>
-          <input type="number" className="text-right text-box"></input>
-          <input type="number" className="text-right text-box"></input>
+          <CurrencyInput
+            id="input-example"
+            name="input-name"
+            placeholder="€00,00"
+            decimalsLimit={2}
+            groupSeparator="."
+            decimalSeparator=","
+            prefix="€"
+            className="text-box text-right"
+          />
+          <CurrencyInput
+            id="input-example"
+            name="input-name"
+            placeholder="€00,00"
+            decimalsLimit={2}
+            groupSeparator="."
+            decimalSeparator=","
+            prefix="€"
+            className="text-box text-right"
+          />
         </div>
       </div>
       <div>
